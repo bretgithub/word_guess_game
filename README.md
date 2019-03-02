@@ -33,7 +33,7 @@ The exercise had us manipulate:
 * Strings
 * Debugging
 
-###$ NOTE: I DID NOT FINISH THIS HOMEWORK BUT I WOULD LIKE TO CONTINUE TO WORK ON THIS AND FINISH THE LOGIC
+#### NOTE: I DID NOT FINISH THIS HOMEWORK BUT I WOULD LIKE TO CONTINUE TO WORK ON THIS AND FINISH THE LOGIC
 
 ## Roadmap
 I intend to redesign this page with more styling using Bootstrap to jazz it up, also, to finish the logic so it works as expected, I did not include the following logic:
