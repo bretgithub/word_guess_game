@@ -17,7 +17,7 @@ This was our first homework, advanced assignment, using JavaScript in conjunctio
 * Display specific text on the page 
 * There is a counter, guesses remaining that the user has until the game is lost
 
-I modified the requirements because I was not interested in displaying losses or wins, you either win and the game reselts or you run out of guesses and the game resets, the counter is set on the guesses left so I met the requirement there and made a more realistic game experience
+I modified the requirements because I was not interested in displaying losses or wins, you either win and the game reselts or you run out of guesses and the game resets, the counter is set on the guesses left so I met the requirement there and made a more realistic game experience.
 
 On top of the requirements and modifications listed above, I added:
 * alerts to let the user know when they won or lost and what the correct letter was
@@ -33,7 +33,7 @@ The exercise had us manipulate:
 * Strings
 * Debugging
 
-### NOTE: I DID NOT FINISH THIS HOMEWORK BUT I WOULD LIKE TO CONTINUE TO WORK ON THIS AND FINISH THE LOGIC
+###$ NOTE: I DID NOT FINISH THIS HOMEWORK BUT I WOULD LIKE TO CONTINUE TO WORK ON THIS AND FINISH THE LOGIC
 
 ## Roadmap
 I intend to redesign this page with more styling using Bootstrap to jazz it up, also, to finish the logic so it works as expected, I did not include the following logic:
@@ -42,7 +42,7 @@ I intend to redesign this page with more styling using Bootstrap to jazz it up, 
 * If the user repeats a letter guess it alerts the user and does not count towards a guess remaining
 
 ## Feedback
-Open to feedback, I posted pain-points in the comments of the <a href="https://github.com/bretgithub/basic-portfolio/blob/master/assets/css/style.css">style.css</a> file. 
+Open to feedback and how to finish the logic, restructure code.
 
 ## Shoutout
-Props to Molly, Joe, and Trae who are our cohort's TAs who helped work through logic and how to better structure the code in a way that would allow me to write more efficient functions. 
+Props to Molly, Joe, and Trae who are our cohort's TAs who helped work through logic and how to better structure the code in a way that would allow me to write more efficient functions.
