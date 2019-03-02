@@ -1,92 +1,71 @@
-// variables for the game
-var wordBank = ["haim"] //["madonna", "rihanna", "beyonce", "cardi-b", "haim", "selena"];
-// var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var guessCounter = 5; //decreasing amount of guesses remaining
-var lettersGuessed = []; //what they have guessed -- all letters
-var word = []; // stores wordBank as getting random string 
-var blanks = []; // display _ _ _ _ to user of word 
-var wins = 0;
-var losses = 0;
-// let gamesWon = 0;
-// let gamesLost = 0;
+// array to hold the words that we will grab a string at random
+var wordBank = ["haim", "golf"];
+// variable to start the amount of guesses the user has to make before they lost the game
+var guessCounter = 5;
+// array to store the letters that the user inputs as their guess
+var lettersGuessed = [];
+// empty array to store the string picked at random from wordBank
+var word = [];
+// empty array which will later display _ equal to the letters in the word picked
+var blanks = [];
 
-// var questionBank=new Array;
-// var wordArray=new Array;
-// var previousGuesses=new Array;
-// var currentWord;
-// var currentClue;
-// var wrongAnswerCount;
+function drawStuff() {
+    // put all the stuff to be drawn on the screen
+    document.getElementById("display_word").textContent = `Word: ${blanks}`;
+    document.getElementById("remaining_guesses").textContent = `Guesses remaining: ${guessCounter}`;
+    document.getElementById("letters_picked").textContent = `Letters you've guessed: ${lettersGuessed}`; //"Your Choise: " + variable + "!")
+}
 
-// var name = prompt("What is your name?");
-// console.log("Hello" + name);
+function startGame() {
+    guessCounter = 5;
+    word = wordBank[Math.floor(Math.random() * wordBank.length)];
+    blanks = [];
+    lettersGuessed = [];
+    for (i = 0; i < word.length; i++) {
+        blanks.push("_"); //I am going to add _ to the array for the word chosen and matches the amount of letters to _
+    }
+    drawStuff();
+}
 
-var remainingGuesses = document.getElementById("remaining_guesses");
-var word = wordBank[Math.floor(Math.random() * wordBank.length)];
-var lettersToGuess = word.length;
 
-var guess = prompt("Guess a letter, or click Cancel to stop playing.");
-if (guess === null) {
-    // Exit the game loop
+document.onkeyup = function (event) {
+    startGame();
+    document.onkeyup = function (event) {
+        var userInput = event.key;
+        var indexOfLetter = word.indexOf(userInput);
+        console.log(userInput);
+        lettersGuessed.push(userInput);
+        console.log(lettersGuessed);
+        guess(userInput);
 
-} else if (guess.length !== 1) {
-    alert("Please enter a single letter.");
-} else {
-    // Update the game state with the guess
+        function guess(ltr) {
+            if (indexOfLetter !== -1) { //for loop to check if letter is in the entire word
+                blanks[indexOfLetter] = ltr;
+                console.log(blanks);
+                console.log("this letter is in the word");
+            } else {
+                guessCounter--;
+                console.log("this letter is not in the word");
+            }
+            drawStuff();
 
-    for (var j = 0; j < word.length; j++) {
-        if (word[j] === guess) {
-            wordBank[j] = guess; lettersToGuess--;
+            if (blanks.join('') === word) {
+                alert("You've won! The word was '" + word.toUpperCase() + "' Click ok to play again!");
+                startGame();
+            }
+
+            if (guessCounter === 0) {
+                alert("You lost. The word was '" + word.toUpperCase() + "' Click ok to play again.");
+                startGame();
+            }
         }
+        console.log(wordBank);
+        console.log(lettersToGuess);
     }
 }
-console.log(wordBank);
-console.log(lettersToGuess);
-// for (i = 0; i < word.length; i++) {
-//     blanks.push("_"); //I am going to add _ to the array for the word chosen and matches the amount of letters to _
-// }
 
 
-// document.onkeyup = function (event) {
-//     // user presses a button
-//     var userInput = event.key;
-//     // console.log(userInput);
-//     // computer grabs a word from wordBank
-//     // let rand = Math.floor(Math.random() * choices.length);
-//     lettersGuessed.push(userInput);
-//     console.log(lettersGuessed);
-
-//     document.getElementById("letters_picked").textContent = `Letters you've guessed: ${lettersGuessed}`; //"Your Choise: " + variable + "!")
-//     document.getElementById("display_word").textContent = `${blanks}`;
-
-//     if (word.indexOf(userInput) !== -1) {
-//         console.log("correct guess", word.indexOf(userInput));
-//         blanks[word.indexOf(userInput)] = userInput; //blanks at spot 5 should = user input
-//         console.log(blanks);
-//     }
-
-// }
-
-// //    if (choices.indexOf(userInput) !== -1) {
-// // var userInput = "G";
-// // for (j)
-
-// // for (var i = 0; i < word.length; i++) {
-// //     lettersGuessed[i] = "_";
-// // }
-// // var lettersLeft = word.length;
-
-// // while (lettersLeft > 0) {
-// //     // Game code goes here
-// //     // Show the player their progress
-// //     // Take input from the player
-// //     // Update answerArray and remainingLetters for every correct guess
-// // }
-
-
-
-
-
-// //"selena gomez", "katy perry", "avril lavigne", "jennifer lopez", "p!nk, rihanna", "alicia keys", "adele", "icki minaj", "whitney houston", "lana del rey", "ariana grande", "lady gaga", "britney spears"
-// //"selena gomez", "katy perry", "avril lavigne", "jennifer lopez", "p!nk, rihanna", "alicia keys", "adele", "icki minaj", "whitney houston", "lana del rey", "ariana grande", "lady gaga", "britney spears"
+// //"selena gomez", "katy perry", "avril lavigne", "jennifer lopez", "p!nk, rihanna", "alicia keys", "adele", "Nicki minaj", "whitney houston", "lana del rey", "ariana grande", "lady gaga", "britney spears"
+// //"selena gomez", "katy perry", "avril lavigne", "jennifer lopez", "p!nk, rihanna", "alicia keys", "adele", "nicki minaj", "whitney houston", "lana del rey", "ariana grande", "lady gaga", "britney spears"
 // //"Selena Gomez", "Katy Perry", "Avril Lavigne", "Jennifer Lopez", "P!nk", "Rihanna", "Alicia Keys", "Adele", "Nicki Minaj", "Whitney Houston", "Lana Del Rey", "Ariana Grande", "Lady Gaga", "Britney Spears"
 
