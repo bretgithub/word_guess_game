@@ -64,13 +64,13 @@ document.onkeyup = function (event) {
                 // debugging
                 console.log(blanks);
                 // debugging
-                console.log("this letter is in the word");
+                console.log("Right now I'm in a state of mind");
                 // if the user does not pick the correct letter
             } else {
                 // decrease the amount of guesses the user has remaining
                 guessCounter--;
                 // debugging
-                console.log("this letter is not in the word");
+                console.log("I wanna be in ike all the time");
             }
             // calls the drawStuff function to update the DOM to the user
             drawStuff();
