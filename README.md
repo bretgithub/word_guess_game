@@ -20,10 +20,10 @@ This was our first homework, advanced assignment, using JavaScript in conjunctio
 I modified the requirements because I was not interested in displaying losses or wins, you either win and the game reselts or you run out of guesses and the game resets, the counter is set on the guesses left so I met the requirement there and made a more realistic game experience.
 
 On top of the requirements and modifications listed above, I added:
-* alerts to let the user know when they won or lost and what the correct letter was
-* if the user chose a letter they had already chosen, the user is alerted to picj another letter
-* the counter only decreases if the user only pics a unique wrong letter, not a repeat
-* the game resets after the user won or lost
+* Alerts to let the user know when they won or lost and what the correct letter was
+* If the user chose a letter they had already chosen, the user is alerted to picj another letter
+* The counter only decreases if the user only pics a unique wrong letter, not a repeat
+* The game resets after the user won or lost
 
 The exercise had us manipulate:
 * Functions
@@ -40,6 +40,8 @@ I intend to redesign this page with more styling using Bootstrap to jazz it up, 
 * How to handle a word with more than one of the same letter like banana
 * How to handle words in different cases (simply by turning it all to lowerCase or upperCase)
 * If the user repeats a letter guess it alerts the user and does not count towards a guess remaining
+* Adding music to the game
+* Setting up an image that acts like a traditional hangman game, when it is complete (guesses remaining is 0), game resets
 
 ## Feedback
 Open to feedback and how to finish the logic, restructure code.
