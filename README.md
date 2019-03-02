@@ -1,4 +1,4 @@
-# Word Guess Game aka Hangman
+# Word Guessing Game aka Hangman
 
 ## Description
 This was our first homework, advanced assignment, using JavaScript in conjunction with HTML and CSS to create a game. The minimum requirements of the game are listed below:
