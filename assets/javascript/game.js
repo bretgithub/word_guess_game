@@ -1,5 +1,5 @@
 // array to hold the words that we will grab a string at random
-var wordBank = ["haim", "golf"];
+var wordBank = ["pokerface", "monster"];
 // variable to start the amount of guesses the user has to make before they lost the game
 var guessCounter = 5;
 // array to store the letters that the user inputs as their guess
@@ -96,8 +96,10 @@ document.onkeyup = function (event) {
     }
 }
 
-// full arrays to use when more logic is figured out with upper and lowercase, repeating letters in the word like banana
-// //"selena gomez", "katy perry", "avril lavigne", "jennifer lopez", "p!nk, rihanna", "alicia keys", "adele", "Nicki minaj", "whitney houston", "lana del rey", "ariana grande", "lady gaga", "britney spears"
-// //"selena gomez", "katy perry", "avril lavigne", "jennifer lopez", "p!nk, rihanna", "alicia keys", "adele", "nicki minaj", "whitney houston", "lana del rey", "ariana grande", "lady gaga", "britney spears"
-// //"Selena Gomez", "Katy Perry", "Avril Lavigne", "Jennifer Lopez", "P!nk", "Rihanna", "Alicia Keys", "Adele", "Nicki Minaj", "Whitney Houston", "Lana Del Rey", "Ariana Grande", "Lady Gaga", "Britney Spears"
+// full arrays to use when more logic is figured out with upper and lowercase, spaces, repeating letters in the word like banana
+// "bloodline", "needy", imagine", "notearslefttocry", "dangerouswoman", "sevenrings", "thankunext", "intoyou", "badidea", "sweetener", "ghostin", "breakupwithyourboyfriend", "monster", "paparazzi", "badromance", "shallow", "pokerface", "badkids", "runawaywithme", "callmemaybe", "firstkiss", "paertyforone", "cuttothefeeling"]
+// "blood line", "needy", imagine", "no tears left to cry", "dangerous woman", "seven rings", "thank you, next", "into you", "bad idea", "sweetener", "ghostin", "break up with your boyfriend", "monster", "paparazzi", "bad romance", "shallow", "poker face", "bad kids", "run away with me", "call me maybe", "first kiss", "party for one", "cut to the feeling"]
+// "Blood Line", "Needy", Imagine", "Get On Your Knees", "No Tears Left To Cry", "The Light Is Coming", "Bed", "Dangerous Woman", "Seven Rings", "Thank You, Next", "Into You", "Bad Idea", "Sweetener", "Ghostin", "Break Up With Your Boyfriend", "Monster", "Million Reasons", "Bad Romance", "Shallow", "poker face", "Bad Kids", "Run Away With Me", "Call Me Maybe", "First Kiss", "Party For One", "Cut To The Feeling"]
+
+
 
