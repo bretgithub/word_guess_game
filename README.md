@@ -33,6 +33,9 @@ The exercise had us manipulate:
 * Strings
 * Debugging
 
+## GitHub Pages Link
+https://bretgithub.github.io/word_guess_game/
+
 #### NOTE: I DID NOT FINISH THIS HOMEWORK BUT I WOULD LIKE TO CONTINUE TO WORK ON THIS AND FINISH THE LOGIC
 
 ## Roadmap
